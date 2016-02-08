@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', [
-		'uses' => 'HomeController@index',
-		'as' => 'home'
-]);
+Route::group(['middleware' => ['web']], function () {
+	Route::get('/', [
+			'uses' => 'HomeController@index',
+			'as' => 'home'
+	]);
+	Route::post('/contacto', [
+			'uses' => 'HomeController@contact',
+			'as' => 'contact'
+	]);
+});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +34,4 @@ Route::get('/', [
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+

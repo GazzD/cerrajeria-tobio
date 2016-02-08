@@ -66,21 +66,23 @@ BRUSHED.slider = function(){
 		// Size & Position						   
 		min_width		        :   0,			// Min width allowed (in pixels)
 		min_height		        :   0,			// Min height allowed (in pixels)
-		vertical_center         :   1,			// Vertically center background
+		vertical_center         :   0,			// Vertically center background
 		horizontal_center       :   1,			// Horizontally center background
-		fit_always				:	0,			// Image will never exceed browser width or height (Ignores min. dimensions)
+		fit_always				:	1,			// Image will never exceed browser width or height (Ignores min. dimensions)
 		fit_portrait         	:   1,			// Portrait images will not exceed browser height
-		fit_landscape			:   0,			// Landscape images will not exceed browser width
+		fit_landscape			:   1,			// Landscape images will not exceed browser width
 												   
 		// Components							
 		slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''}  
+		       					   	 		{image : 'img/carrusel/slide0.png', info : 'cerrajería tobio pontevedra', thumb : '', url : ''},
+											{image : 'img/carrusel/slide1.jpg', info : 'cerrajería tobio', thumb : '', url : ''},
+											{image : 'img/carrusel/slide2.jpg', info : 'puertas seccionales', thumb : '', url : ''},
+											{image : 'img/carrusel/slide3.jpg', info : 'soldadores hierro pontevedra', thumb : '', url : ''},
+											{image : 'img/carrusel/slide4.jpg', info : 'soldadores en pontevedra', thumb : '', url : ''},
+											{image : 'img/carrusel/slide5.jpg', info : 'cierres y portales', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   
@@ -195,7 +197,7 @@ BRUSHED.contactForm = function(){
 		
 		$.ajax({
 			type: "POST",
-			url: "_include/php/contact.php",
+			url: "php/contact.php",
 			data: fields,
 			dataType: 'json',
 			success: function(response) {
@@ -211,40 +213,6 @@ BRUSHED.contactForm = function(){
 		return false;
 	});
 }
-
-
-/* ==================================================
-   Twitter Feed
-================================================== */
-
-BRUSHED.tweetFeed = function(){
-	
-	var valueTop = -64; // Margin Top Value
-	
-    $("#ticker").tweet({
-          modpath: '_include/js/twitter/',
-          username: "Bluxart", // Change this with YOUR ID
-          page: 1,
-          avatar_size: 0,
-          count: 10,
-		  template: "{text}{time}",
-		  filter: function(t){ return ! /^@\w+/.test(t.tweet_raw_text); },
-          loading_text: "loading ..."
-	}).bind("loaded", function() {
-	  var ul = $(this).find(".tweet_list");
-	  var ticker = function() {
-		setTimeout(function() {
-			ul.find('li:first').animate( {marginTop: valueTop + 'px'}, 500, 'linear', function() {
-				$(this).detach().appendTo(ul).removeAttr('style');
-			});	
-		  ticker();
-		}, 5000);
-	  };
-	  ticker();
-	});
-	
-}
-
 
 /* ==================================================
    Menu Highlight
@@ -405,7 +373,7 @@ $(document).ready(function(){
 	Modernizr.load([
 	{
 		test: Modernizr.placeholder,
-		nope: '_include/js/placeholder.js', 
+		nope: 'js/placeholder.js', 
 		complete : function() {
 				if (!Modernizr.placeholder) {
 						Placeholders.init({

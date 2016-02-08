@@ -7,14 +7,16 @@
     <head>
     	<!-- Meta Tags -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="description" content="Insert Your Site Description" /> 
+		<meta name="keywords" content="cerrajería, cerrajerías en pontevedra, cierres, puertas, portales, balcones, puertas entrada, puertas seccionales, pasamanos, automatismos, acero inoxidable, aluminio" />
+		<meta name="description" content="Cerrajería Tobío | cierres, portales, balcones, puertas, puertas entrada, puertas seccionales, pasamanos, automatismos | Soluciones a su medida" />
+		<meta name="author" content="Cerrajería Tobio Pontevedra"> 
 		<!-- Mobile Specifics -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="HandheldFriendly" content="true"/>
 		<meta name="MobileOptimized" content="320"/>
 		<!-- Mobile Internet Explorer ClearType Technology -->
 		<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
-        <title>||| Cerrajería Tobío ||| cierres, portales, balcones, puertas, puertas entrada, puertas seccionales, pasamanos, automatismos |||</title>
+        <title>Cerrajería Tobío Pontevedra – Trabajos en hierro, acero y aluminio</title>
         <!-- Bootstrap -->
         {!!Html::style('css/bootstrap.min.css')!!}
         <!-- Main Style -->
