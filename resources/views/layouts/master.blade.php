@@ -73,8 +73,8 @@
         @yield('content')
         
         <!-- Js -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
-		<script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+		{!!Html::script('js/jquery-1.12.0.min.js')!!} <!-- JQuery Core -->
+		{!!Html::script('js/bootstrap.min.js')!!} <!-- Bootstrap -->
 		{!!Html::script('js/supersized.3.2.7.min.js')!!} <!-- Slider -->
 		{!!Html::script('js/waypoints.js')!!} <!-- WayPoints -->
 		{!!Html::script('js/waypoints-sticky.js')!!} <!-- Waypoints for Header -->

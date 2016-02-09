@@ -7,12 +7,18 @@
 <div class="container">
     <!-- Title Page -->
     <div class="row">
-        <div class="span12">
+        <div class="span12" style="height: 504px;">
             <div class="title-page">
                 <h2 class="title">Cerrajería Tobio</h2>
                 <h3 class="title-description">Desde la tradición del hierro forjado...</h3>
                 <br />
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tMlNYv-8Vf0" frameborder="0" allowfullscreen></iframe>
+                <div class="span3"></div>
+                <div class="videoWrapper span6">
+                    <!-- Copy & Pasted from YouTube -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tMlNYv-8Vf0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="span3"></div>
+                
             </div>
         </div>
     </div>
@@ -1064,7 +1070,7 @@ Nuestro compromiso es ofrecer a nuestros clientes la máxima calidad  y  confian
 
 
 
-<!-- Twitter Feed -->
+<!-- Footer -->
 <div class="page-alternate">
 	<div class="container">
     	<div class="row">
@@ -1086,6 +1092,5 @@ Nuestro compromiso es ofrecer a nuestros clientes la máxima calidad  y  confian
         </div>
     </div>
 </div>
-<!-- End Twitter Feed -->
-
+<!-- End Footer -->
 @endsection
